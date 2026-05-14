@@ -1,9 +1,84 @@
-import { Zap } from "lucide-react";
+import { BarChart3, FileText, LayoutDashboard, MessageSquare, Package, ShoppingBag, Zap, Users, CreditCard, Calendar, Settings
+ } from "lucide-react";
+import React from "react";
 
+const menuItems = [
+  {
+    id:"dashboard",
+    icon:LayoutDashboard,
+    label:"Dashoard",
+    active:true,
+    badge:"New"
+  },
+   {
+    id:"analytics",
+    icon:BarChart3,
+    label:"Analytics",
+    submenu:[
+     { id:"overview",label:"Overview"},
+    { id:"reports",label:"Reports"},
+    { id:"Insights",label:"Insights"},
+    ],
+  },
+   {
+    id:"users",
+    icon:Users,
+    label:"Users",
+    count:"2.4k",
+    submenu:[
+     { id:"all-users",label:"All Users"},
+    { id:"roles",label:"Roles & Permissions"},
+    { id:"activity",label:"User Activity"},
+    ],
+  },
+   {
+    id:"ecommerce",
+    icon:ShoppingBag,
+    label:"E-Commerce",
+    count:"2.4k",
+    submenu:[
+     { id:"products",label:"Products"},
+    { id:"orders",label:"Orders"},
+    { id:"customers",label:"Customers"},
+    ],
+  },
+   {
+    id:"Inventory",
+    icon:Package,
+    label:"Inventory",
+    count:"847",
+  },
+ {
+    id:"transactions",
+    icon:CreditCard,
+    label:"Transactions",
+  },
+   {
+    id:"messages",
+    icon:MessageSquare,
+    label:"Messages",
+   badge:"12",
+  },
+   {
+    id:"calendar",
+    icon:Calendar,
+    label:"Calendar",
+  },
+   {
+    id:"reports",
+    icon:FileText,
+    label:"Reports",
+  },
+  {
+    id:"settings",
+    icon:Settings,
+    label:"Settings",
+  },
+];
 
 function Sidebar() {
   return (
-    <div className="transition duration-300 ease-in-out bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col relative z-10 p-3">
+    <div className="w-52 transition duration-300 ease-in-out bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col relative z-10 p-3">
       {/* {logo} */}
       <div className="p-6 border-b border-slate-200/50 dark:border-slate-700/50">
         <div className="flex items-center space-x-3">
